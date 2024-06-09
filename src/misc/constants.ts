@@ -1,0 +1,1 @@
+export const ALL_CATEGORY_ID = '6623281e0f599f39adffc90a'
