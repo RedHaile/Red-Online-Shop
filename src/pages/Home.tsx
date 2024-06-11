@@ -48,7 +48,7 @@ const Home = () => {
               fontWeight: 'bold'
             }}
           >
-            Red Shop
+            Red Online Shop
           </Typography>
           <Typography variant="body1" sx={{ fontWeight: 400, margin: '0px 20px 30px 20px', textAlign: 'center' }}>
             Welcome to Red Online Shop

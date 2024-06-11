@@ -14,6 +14,7 @@ import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import defaultImage from '../assets/images/default_image.jpg'
 import img from '../assets/images/no-product-cart.png'
+import shop from '../assets/images/shop.svg'
 import { addOrderByUserId, clearCart, removeFromCart, updateQuantity } from '../redux/slices/cartSlice'
 import { AppState, useAppDispatch } from '../redux/store'
 import { checkImage } from '../utils/checkImage'
@@ -100,7 +101,7 @@ const Cart = () => {
         <CardMedia
           component="img"
           alt={'There is no item in the cart :/'}
-          image={img}
+          image={shop}
           sx={{ width: { xxs: '100%', sm: '50%' } }}
         />
       ) : (
