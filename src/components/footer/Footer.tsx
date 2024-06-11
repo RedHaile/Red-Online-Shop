@@ -4,13 +4,13 @@ import { memo } from 'react'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import Box from '@mui/material/Box'
-import { FaGithub } from 'react-icons/fa'
-import { CenteredBox } from '../../styled-components/Box'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+
 
 const media = [
  
-  { link: 'https://github.com/RedHaile/', icon: FaGithub }
-
+  { link: 'https://github.com/RedHaile/', icon: FaGithub },
+  { link: 'https://www.linkedin.com/in/redeat-h-5934b513a', icon: FaLinkedinIn }
 ]
 
 const Footer = () => {
@@ -18,10 +18,13 @@ const Footer = () => {
     <Box
       sx={{
         padding: '20px',
-        textAlign: 'center',
+        textAlign: 'right',
         borderTop: '1px solid #ddd',
         bottom: '0',
-        width: '100%'
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+         alignItems: 'center'
       }}
     >
       <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
@@ -32,23 +35,23 @@ const Footer = () => {
           rel="noreferrer"
           sx={{ 'textDecoration': 'none', 'listStyle': 'none', '&:hover': { color: '#255c99' } }}
         >
-          Redeat Hail
+          Redeat Haile
         </Link>
       </Typography>
-      <CenteredBox sx={{ marginTop: '20px' }}>
+      <Box sx={{ marginTop: '20px' }}>
         {media.map((item, index) => (
           <Link
             key={index}
             href={item.link}
             target="_blank"
             rel="noreferrer"
-            sx={{ 'fontSize': '26px', 'textDecoration': 'none', 'listStyle': 'none', '&:hover': { color: '#255c99' }, margin: '2px 12px' }}
+            sx={{ 'fontSize': '26px', 'textDecoration': 'none', 'listStyle': 'none', '&:hover': { color: '#255c99' }, margin: '0 12px' }}
             color="text.primary"
           >
             <item.icon />
           </Link>
         ))}
-      </CenteredBox>
+      </Box>
     </Box>
   )
 }

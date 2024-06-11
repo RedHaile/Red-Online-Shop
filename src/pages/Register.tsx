@@ -24,7 +24,7 @@ const Register = () => {
       password: '',
       confirmedPassword: '',
       avatar: 
-        'https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        'https://images.unsplash.com/photo-1578681994506-b8f463449011?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       
     },
     validationSchema: Yup.object({
@@ -42,7 +42,7 @@ const Register = () => {
       avatar: Yup.string().required('Required')
     }),
     onSubmit: async (values, { resetForm }) => {
-    
+      // eslint-disable-next-line no-unused-vars
       const { confirmedPassword, ...data } = values
       try {
         await dispatch(registerUserAsync(data))

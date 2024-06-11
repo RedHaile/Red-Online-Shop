@@ -40,9 +40,9 @@ const Admin = () => {
     dispatch(fetchUsersAsync())
   }, [dispatch])
 
-  const handleTabChange = (tabName: string) => {
+  /*const handleTabChange = (tabName: string) => {
     setTab(tabName);
-  };
+  };*/
 
 
   if (productLoading || userLoading) {
@@ -84,10 +84,9 @@ const Admin = () => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '100vh' }}>
       <Box sx={{ margin: '20px 0 20px 0' }}>
-      <Button variant={tab === 'products' ? 'contained' : 'outlined'} onClick={() => handleTabChange('products')}>Products</Button>
-        <Button variant={tab === 'users' ? 'contained' : 'outlined'} onClick={() => handleTabChange('users')}>Users</Button>
+      <Button variant={tab === 'products' ? 'contained' : 'outlined'} onClick={() => setTab('products')}>Products</Button>
+        <Button variant={tab === 'users' ? 'contained' : 'outlined'} onClick={() => setTab('users')}>Users</Button>
       </Box>
-  
       
       {tab === 'products' && (
         <TableContainer component={Paper}>

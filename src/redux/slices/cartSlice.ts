@@ -113,8 +113,7 @@ const cartSlice = createSlice({
     
     builder.addCase(addOrderByUserId.fulfilled, state => {
       return {
-        ...state,
-        loading: false,
+        ...state
       }
     })
     builder.addCase(addOrderByUserId.pending, state => {

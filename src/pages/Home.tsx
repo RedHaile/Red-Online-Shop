@@ -51,7 +51,7 @@ const Home = () => {
             Red Shop
           </Typography>
           <Typography variant="body1" sx={{ fontWeight: 400, margin: '0px 20px 30px 20px', textAlign: 'center' }}>
-            Welcome to Red Online Shop!
+            Welcome to Red Online Shop
           </Typography>
           <Button
             variant="outlined"
