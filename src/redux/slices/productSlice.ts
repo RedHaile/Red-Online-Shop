@@ -26,7 +26,7 @@ const initialState: InitialState = {
 }
 
 type RealUrlResponse = {
-  totalProduct: number
+  totalCount: number
   products: ProductType[]
 }
 
@@ -123,7 +123,7 @@ const productSlice = createSlice({
         return {
           ...state,
           products: action.payload.products,
-          total: action.payload.totalProduct,
+          total: action.payload.totalCount,
           loading: false,
           error: null
         }
@@ -148,7 +148,7 @@ const productSlice = createSlice({
         return {
           ...state,
           products: action.payload.products,
-          total: action.payload.totalProduct,
+          total: action.payload.totalCount,
           loading: false,
           error: null
         }
@@ -197,7 +197,7 @@ const productSlice = createSlice({
         return {
           ...state,
           products: action.payload.products,
-          total: action.payload.totalProduct,
+          total: action.payload.totalCount,
           loading: false,
           error: null
         }
